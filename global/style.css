@@ -1,0 +1,148 @@
+/* 기본 테마: 기존 코드 유지 */
+.modern-theme {
+    background-color: #FAF4E1;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* 전체 폰트 적용 */
+}
+
+/* 헤더: 기존 코드 유지 */
+.header {
+    background: linear-gradient(150deg, #FEF889, #fe9b1c);
+    color: #FFFFFF;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 4.5em;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 15px;
+}
+.title_sub_name {
+    font-size: medium;
+}
+.title_end {
+    font-size: small;
+}
+
+/* --- ▼ 여기서부터 추가/수정된 코드 ▼ --- */
+
+/* 공통 섹션 제목 스타일 */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+/* 사장 프로필 섹션 */
+.profile-section {
+    max-width: 900px;
+    margin: 50px auto; /* 위아래, 좌우 자동 마진 */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    display: flex; /* 내부 요소들을 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 30px; /* 이미지와 내용 사이 간격 */
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 이미지를 원형으로 만듦 */
+    object-fit: cover; /* 이미지가 찌그러지지 않게 함 */
+    border: 5px solid #FEF889;
+}
+
+.profile-content .owner-name {
+    margin: 0;
+    font-size: 2em;
+    color: #fe9b1c;
+}
+
+.profile-content .owner-title {
+    margin: 5px 0 15px 0;
+    font-style: italic;
+    color: #555;
+}
+
+.profile-content .certificate {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    display: inline-block; /* 내용만큼만 너비 차지 */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 메뉴 섹션 */
+.menu-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    /* 화면 크기에 따라 250px 크기의 아이템을 자동으로 채워 넣음 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* 아이템 사이의 간격 */
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* 이미지가 카드 밖으로 나가지 않게 함 */
+    text-align: center;
+    padding: 15px;
+    
+    /* ✨ 핵심: 부드러운 전환 효과 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    /* ✨ 핵심: 마우스를 올리면 1.05배 커짐 */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 그림자도 진하게 */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.menu-item h3 {
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px;
+}
+
+/* copyright 푸터 */
+.copyright {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #888;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
